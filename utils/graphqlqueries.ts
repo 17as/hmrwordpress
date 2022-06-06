@@ -9,7 +9,8 @@ query AllPosts {
         date
         featuredImage {
           node {
-            sourceUrl
+            sourceUrl,
+            altText
           }
         }
         author {
@@ -26,4 +27,4 @@ query AllPosts {
     }
   }
 }
-`
+`;
