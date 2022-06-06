@@ -28,9 +28,6 @@ export const RecipeCard = ({
       />
     )}
     <h2>{title}</h2>
-    <div
-      className="text-lg leading-relaxed mb-4"
-      dangerouslySetInnerHTML={{ __html: excerpt }}
-    />
+    <div dangerouslySetInnerHTML={{ __html: excerpt }} />
   </section>
 );
