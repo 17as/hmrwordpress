@@ -1,6 +1,7 @@
 ## What this project is about
 
 This is a recipes/food headless Wordpress blog created with Next.js and GraphQL.
+Preview here: https://hmrwordpress-gedjox67g-17as.vercel.app/
  
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
