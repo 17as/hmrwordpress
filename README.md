@@ -1,7 +1,11 @@
 ## What this project is about
 
 This is a recipes/food headless Wordpress blog created with Next.js and GraphQL.
+ 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Setup
+Add an .env.local file to the root of your project with `API_URL=[YOUR_GRAPHQL_ENPOINT_HERE]` content.
 
 ## Getting Started
 
