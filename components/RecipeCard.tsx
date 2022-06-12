@@ -3,14 +3,18 @@ import React from "react"; // we need this to make JSX compile
 import styled from "styled-components";
 
 export const StylesCard = styled.section`
-  margin: 48px 16px;
+  margin: 48px 8px;
+  border: 1px solid black;
+  border-radius: 12px;
+  overflow: hidden;
 
   max-width: 650px;
-  img {
-    border-radius: 4px;
-  }
   p {
     line-height: 150%;
+    padding: 0 8px;
+  }
+  h2 {
+    padding: 0 8px;
   }
   @media (min-width: 481px) and (min-width: 767px) {
     margin: 48px auto;
@@ -40,7 +44,6 @@ export const RecipeCard = ({
         height={486}
         alt={featuredImage?.node?.altText}
         src={featuredImage.node.sourceUrl}
-        layout="responsive"
       />
     )}
     <h2>{title}</h2>

@@ -2,7 +2,7 @@ import React from "react"; // we need this to make JSX compile
 import styled from "styled-components";
 
 export const StylesFooter = styled.footer`
-  background: linear-gradient(to right, #002244, #0039a6, #00308f, #00308f);
+  background: #00308f;
   padding: 16px;
   color: white;
   text-align: center;
