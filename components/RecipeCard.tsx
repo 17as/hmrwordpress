@@ -8,7 +8,7 @@ export const StylesCard = styled.section`
   border-radius: 12px;
   overflow: hidden;
 
-  max-width: 650px;
+  max-width: 652px; // to include the border
   p {
     line-height: 150%;
     padding: 0 8px;
