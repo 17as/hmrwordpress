@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StylesCard = styled.section`
   margin: 48px 16px;
 
-  max-width: 768px;
+  max-width: 650px;
   img {
     border-radius: 4px;
   }
