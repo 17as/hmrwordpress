@@ -40,6 +40,7 @@ export const RecipeCard = ({
         height={486}
         alt={featuredImage?.node?.altText}
         src={featuredImage.node.sourceUrl}
+        layout="responsive"
       />
     )}
     <h2>{title}</h2>
