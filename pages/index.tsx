@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { AppFooter } from "../components/AppFooter";
+import { AppHeader } from "../components/AppHeader";
 import { RecipeCardProps } from "../components/RecipeCard";
 import { RecipeCardList } from "../components/RecipeCardList";
 import styles from "../styles/Home.module.css";
@@ -24,12 +26,12 @@ const Home: NextPage<HomeProps> = (props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>Homemaderecipes</header>
+      <AppHeader />
       <main className={styles.main}>
         <RecipeCardList posts={props.allPosts} />
       </main>
 
-      <footer className={styles.footer}>Made with ♡ in Munich</footer>
+      <AppFooter />
     </>
   );
 };

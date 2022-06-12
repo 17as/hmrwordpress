@@ -13,16 +13,6 @@ query AllPosts {
             altText
           }
         }
-        author {
-          node {
-            name
-            firstName
-            lastName
-            avatar {
-              url
-            }
-          }
-        }
       }
     }
   }
