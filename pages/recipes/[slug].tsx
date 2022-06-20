@@ -22,6 +22,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   return {
     props: { post },
+    revalidate: 86400, // one day in seconds
   };
 };
 
