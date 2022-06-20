@@ -10,7 +10,9 @@ export default function Recipe(props: any) {
     return <ErrorPage statusCode={404} />;
   }
 
-  return <div dangerouslySetInnerHTML={{ __html: props.post.post.content }} />;
+  return (
+    <div dangerouslySetInnerHTML={{ __html: props.post?.post?.content }} />
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
