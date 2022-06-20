@@ -1,7 +1,7 @@
 ## What this project is about
 
 This is a recipes/food headless Wordpress blog created with Next.js and GraphQL.
-Deployed here: https://hmrwordpress.vercel.app/
+Deployed here:[ https://hmrwordpress.vercel.app/](http with Vercel.s://www.homemaderecipes.eu/) with Vercel.
  
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
