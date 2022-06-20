@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react"; // we need this to make JSX compile
 import styled from "styled-components";
 
@@ -37,16 +38,24 @@ export const RecipeCard = ({
   excerpt,
   slug,
 }: RecipeCardProps) => (
-  <StylesCard>
-    {featuredImage?.node?.sourceUrl && (
-      <Image
-        width={650}
-        height={486}
-        alt={featuredImage?.node?.altText}
-        src={featuredImage.node.sourceUrl}
-      />
-    )}
-    <h2>{title}</h2>
-    <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-  </StylesCard>
+  <Link
+    href={{
+      pathname: `/recipes/${slug}`,
+    }}
+  >
+    <a rel="follow">
+      <StylesCard>
+        {featuredImage?.node?.sourceUrl && (
+          <Image
+            width={650}
+            height={486}
+            alt={featuredImage?.node?.altText}
+            src={featuredImage.node.sourceUrl}
+          />
+        )}
+        <h2>{title}</h2>
+        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+      </StylesCard>
+    </a>
+  </Link>
 );

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { AppFooter } from "../components/AppFooter";
 import { AppHeader } from "../components/AppHeader";
@@ -36,11 +36,11 @@ const Home: NextPage<HomeProps> = (props) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPosts = await fetchData(ALL_POSTS);
   return {
     props: { allPosts: allPosts.posts.edges },
   };
-}
+};
 
 export default Home;
