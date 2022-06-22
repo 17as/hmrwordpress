@@ -3,15 +3,19 @@ import ErrorPage from "next/error";
 import { fetchData } from "../../utils/fetchData";
 import { ALL_SLUGS, POST_BY_SLUG } from "../../utils/graphqlqueries";
 import { GetStaticProps } from "next";
+import { Recipe } from "../../components/Recipe";
 
-export default function Recipe(props: any) {
+export default function RecipePost(props: any) {
   const router = useRouter();
   if (!router.isFallback && !props.post.post.slug) {
     return <ErrorPage statusCode={404} />;
   }
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: props.post?.post?.content }} />
+    <Recipe
+      title={props.post?.post?.title}
+      content={props.post?.post?.content}
+    />
   );
 }
 

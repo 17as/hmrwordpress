@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StylesHeader = styled.header`
   height: 64px;
-  background: linear-gradient(to right, #002244, #0039a6, #00308f, #00308f);
+  background: #00308f;
   color: white;
   position: sticky;
   top: 0;
