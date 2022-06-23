@@ -5,12 +5,11 @@ import styled from "styled-components";
 
 export const StylesCard = styled.section`
   margin: 48px 8px;
-  border: 1px solid black;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   background-color: white;
 
-  max-width: 652px; // to include the border
+  max-width: 650px; // to include the border
   p {
     line-height: 150%;
     padding: 0 8px;
@@ -39,13 +38,13 @@ export const RecipeCard = ({
   excerpt,
   slug,
 }: RecipeCardProps) => (
-  <Link
-    href={{
-      pathname: `/recipes/${slug}`,
-    }}
-  >
-    <a rel="follow">
-      <StylesCard>
+  <StylesCard>
+    <Link
+      href={{
+        pathname: `/recipes/${slug}`,
+      }}
+    >
+      <a rel="follow">
         {featuredImage?.node?.sourceUrl && (
           <Image
             width={650}
@@ -56,7 +55,7 @@ export const RecipeCard = ({
         )}
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-      </StylesCard>
-    </a>
-  </Link>
+      </a>
+    </Link>
+  </StylesCard>
 );
