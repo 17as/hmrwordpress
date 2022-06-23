@@ -1,14 +1,20 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { AppHeader } from "../components/AppHeader";
-import { AppFooter } from "../components/AppFooter";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../globalStyles";
+
+const theme = {
+  colors: {
+    primary: "#fafafa",
+  },
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <AppHeader />
-      <Component {...pageProps} />
-      <AppFooter />
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>{" "}
     </>
   );
 }

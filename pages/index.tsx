@@ -1,14 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { RecipeCardProps } from "../components/RecipeCard";
-import { RecipeCardList } from "../components/RecipeCardList";
-import styles from "../styles/Home.module.css";
+import { HomeComponent, HomeProps } from "../components/Home/HomeComponent";
 import { fetchData } from "../utils/fetchData";
 import { ALL_POSTS } from "../utils/graphqlqueries";
-
-type HomeProps = {
-  allPosts: { node: RecipeCardProps }[];
-};
 
 const Home: NextPage<HomeProps> = (props) => {
   return (
@@ -24,9 +18,7 @@ const Home: NextPage<HomeProps> = (props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <RecipeCardList posts={props.allPosts} />
-      </main>
+      <HomeComponent allPosts={props.allPosts} />
     </>
   );
 };

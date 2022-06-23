@@ -4,6 +4,8 @@ import { fetchData } from "../../utils/fetchData";
 import { ALL_SLUGS, POST_BY_SLUG } from "../../utils/graphqlqueries";
 import { GetStaticProps } from "next";
 import { Recipe } from "../../components/Recipe";
+import { AppHeader } from "../../components/AppHeader";
+import { AppFooter } from "../../components/AppFooter";
 
 export default function RecipePost(props: any) {
   const router = useRouter();
@@ -12,10 +14,14 @@ export default function RecipePost(props: any) {
   }
 
   return (
-    <Recipe
-      title={props.post?.post?.title}
-      content={props.post?.post?.content}
-    />
+    <>
+      <AppHeader />
+      <Recipe
+        title={props.post?.post?.title}
+        content={props.post?.post?.content}
+      />
+      <AppFooter />
+    </>
   );
 }
 
