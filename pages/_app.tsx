@@ -4,15 +4,15 @@ import GlobalStyle from "../globalStyles";
 
 const theme = {
   colors: {
-    primary: "#fafafa",
+    primary: " #00308f",
   },
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>{" "}
     </>

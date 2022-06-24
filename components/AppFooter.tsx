@@ -2,7 +2,7 @@ import React from "react"; // we need this to make JSX compile
 import styled from "styled-components";
 
 export const StylesFooter = styled.footer`
-  background: #00308f;
+  background: ${(props) => props.theme.colors.primary};
   padding: 16px;
   color: white;
   text-align: center;
