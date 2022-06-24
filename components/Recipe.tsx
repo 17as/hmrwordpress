@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const StyledRecipe = styled.section`
   margin: 0 8px;
   background-color: white;
+  min-height: 651px;
 
   max-width: 768px;
   p {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const StylesHeader = styled.header`
   height: 64px;
+  min-height: 64px;
   background: #00308f;
   color: white;
   position: sticky;

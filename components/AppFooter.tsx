@@ -6,6 +6,7 @@ export const StylesFooter = styled.footer`
   padding: 16px;
   color: white;
   text-align: center;
+  min-height: 84px;
   p {
     margin: 0;
     line-height: 120%;
