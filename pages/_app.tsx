@@ -4,7 +4,8 @@ import GlobalStyle from "../globalStyles";
 
 const theme = {
   colors: {
-    primary: " #00308f",
+    primary: "#00308f",
+    lightblue: "#f0ffff",
   },
 };
 

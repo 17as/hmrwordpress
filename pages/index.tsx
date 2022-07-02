@@ -40,6 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const allPosts = await fetchData(ALL_POSTS);
   return {
     props: { allPosts: allPosts.posts.edges },
+    revalidate: 86400, // one day in seconds
   };
 };
 
