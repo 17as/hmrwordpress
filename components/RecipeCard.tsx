@@ -4,12 +4,13 @@ import React from "react"; // we need this to make JSX compile
 import styled from "styled-components";
 
 export const StylesCard = styled.section`
-  margin: 48px 8px;
-  border-radius: 4px;
+  margin: 32px auto;
+  border-radius: 6px;
   overflow: hidden;
   background-color: white;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2);
 
-  max-width: 650px; // to include the border
+  max-width: 457px; // to include the border
   p {
     line-height: 150%;
     padding: 0 8px;
@@ -17,7 +18,7 @@ export const StylesCard = styled.section`
   h2 {
     padding: 0 8px;
   }
-  @media (min-width: 481px) and (min-width: 767px) {
+  @media (min-width: 767px) {
     margin: 48px auto;
   }
 `;
@@ -47,8 +48,8 @@ export const RecipeCard = ({
       <a rel="follow">
         {featuredImage?.node?.sourceUrl && (
           <Image
-            width={650}
-            height={486}
+            width={457}
+            height={341}
             alt={featuredImage?.node?.altText}
             src={featuredImage.node.sourceUrl}
           />

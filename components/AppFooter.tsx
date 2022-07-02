@@ -16,7 +16,7 @@ export const StylesFooter = styled.footer`
 
 export const AppFooter = () => (
   <StylesFooter>
-    <p>Made with ♡ in Munich</p>
+    <p>Cooked and backed with ♡ in Munich</p>
     <p>
       All content, including images belong to the owner of homemaderecipes.eu.
       Please do not copy or publish anything wihout permission.

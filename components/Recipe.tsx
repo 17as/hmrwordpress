@@ -24,22 +24,23 @@ export const StyledRecipe = styled.section`
     padding: 24px 0;
     margin: 0;
     font-size: 32px;
+    line-height: 120%;
   }
   @media (min-width: 481px) and (min-width: 767px) {
     margin: 0 auto;
   }
   .wprm-recipe-servings-container {
-    background-color: ${(props) => props.theme.colors.lightblue};
+    background-color: ${(props) => props.theme.colors.lightbackground};
     padding: 16px 8px 16px 16px;
     border-radius: 0 0 6px 6px;
   }
   .wprm-recipe-tags-container {
-    background-color: ${(props) => props.theme.colors.lightblue};
+    background-color: ${(props) => props.theme.colors.lightbackground};
     padding: 16px 8px 16px 16px;
     border-radius: 6px 6px 0 0;
   }
   .wprm-recipe-times-container {
-    background-color: ${(props) => props.theme.colors.lightblue};
+    background-color: ${(props) => props.theme.colors.lightbackground};
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
