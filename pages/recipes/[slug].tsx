@@ -6,6 +6,7 @@ import { GetStaticProps } from "next";
 import { Recipe } from "../../components/Recipe";
 import { AppHeader } from "../../components/AppHeader";
 import { AppFooter } from "../../components/AppFooter";
+import Head from "next/head";
 
 export default function RecipePost(props: any) {
   const router = useRouter();
@@ -15,6 +16,11 @@ export default function RecipePost(props: any) {
 
   return (
     <>
+      <Head>
+        <title>Homemaderecipes - {props.post?.post?.title}</title>
+        <meta name="theme-color" content="#00308f" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <AppHeader />
       <Recipe
         title={props.post?.post?.title}

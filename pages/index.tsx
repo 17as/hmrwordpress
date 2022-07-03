@@ -23,6 +23,7 @@ const Home: NextPage<HomeProps> = (props) => {
           name="description"
           content="Homemaderecipes - tasty and healthy recipes to prepare in your own kitchen "
         />
+        <meta name="theme-color" content="#00308f" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>

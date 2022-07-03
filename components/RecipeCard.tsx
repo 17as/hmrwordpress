@@ -10,7 +10,7 @@ export const StylesCard = styled.section`
   background-color: white;
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2);
 
-  max-width: 457px; // to include the border
+  max-width: 450px;
   p {
     line-height: 150%;
     padding: 0 8px;
@@ -48,8 +48,8 @@ export const RecipeCard = ({
       <a rel="follow">
         {featuredImage?.node?.sourceUrl && (
           <Image
-            width={457}
-            height={341}
+            width={450}
+            height={336}
             alt={featuredImage?.node?.altText}
             src={featuredImage.node.sourceUrl}
           />
