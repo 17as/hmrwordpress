@@ -13,8 +13,8 @@ export default function RecipePost(props: any) {
   if (!router.isFallback && !props.post.post.slug) {
     return <ErrorPage statusCode={404} />
   }
-  console.log('categories', JSON.stringify(props.post.post.categories))
-  console.log('tags', JSON.stringify(props.post.post.tags))
+  //   console.log('categories', JSON.stringify(props.post.post.categories))
+  //   console.log('tags', JSON.stringify(props.post.post.tags))
 
   return (
     <>
