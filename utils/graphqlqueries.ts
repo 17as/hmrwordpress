@@ -17,7 +17,7 @@ query AllPosts {
     }
   }
 }
-`;
+`
 
 export const ALL_SLUGS = `
     {
@@ -29,7 +29,7 @@ export const ALL_SLUGS = `
         }
       }
     }
-  `;
+  `
 
 export const POST_BY_SLUG = `
   fragment PostFields on Post {
@@ -57,4 +57,4 @@ export const POST_BY_SLUG = `
       content
     }
   }
-`;
+`

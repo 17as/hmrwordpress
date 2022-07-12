@@ -1,5 +1,5 @@
-import React from "react"; // we need this to make JSX compile
-import styled from "styled-components";
+import React from 'react' // we need this to make JSX compile
+import styled from 'styled-components'
 
 export const StylesHeader = styled.header`
   height: 64px;
@@ -16,10 +16,10 @@ export const StylesHeader = styled.header`
       padding-left: 16px;
       font-size: 24px
   }
-`;
+`
 
 export const AppHeader = () => (
   <StylesHeader>
     <p>Homemaderecipes.eu</p>
   </StylesHeader>
-);
+)
