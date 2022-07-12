@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react' // we need this to make JSX compile
 import styled from 'styled-components'
 
@@ -10,7 +11,7 @@ export const StylesHeader = styled.header`
   top: 0;
   width: 100%;
   z-index: 1;
-  p {
+  a {
       margin 0;
       line-height: 64px;
       padding-left: 16px;
@@ -20,6 +21,6 @@ export const StylesHeader = styled.header`
 
 export const AppHeader = () => (
   <StylesHeader>
-    <p>Homemaderecipes.eu</p>
+    <Link href={'/'}>Homemaderecipes.eu</Link>
   </StylesHeader>
 )
