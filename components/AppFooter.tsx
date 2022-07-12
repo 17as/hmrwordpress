@@ -1,5 +1,5 @@
-import React from "react"; // we need this to make JSX compile
-import styled from "styled-components";
+import React from 'react' // we need this to make JSX compile
+import styled from 'styled-components'
 
 export const StylesFooter = styled.footer`
   background: ${(props) => props.theme.colors.primary};
@@ -12,15 +12,15 @@ export const StylesFooter = styled.footer`
     line-height: 120%;
     font-size: 14px;
   }
-`;
+`
 
 export const AppFooter = () => (
   <StylesFooter>
-    <p>Cooked and backed with ♡ in Munich</p>
+    <p>Cooked and baked with ♡ in Munich</p>
     <p>
       All content, including images belong to the owner of homemaderecipes.eu.
       Please do not copy or publish anything wihout permission.
     </p>
     <p>Copyright © 2022</p>
   </StylesFooter>
-);
+)
