@@ -13,6 +13,13 @@ query AllPosts {
             altText
           }
         }
+        categories {
+          edges {
+            node {
+              name
+            }
+          }
+        }
       }
     }
   }

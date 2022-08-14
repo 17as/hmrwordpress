@@ -1,15 +1,15 @@
-import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import { AppFooter } from "../components/AppFooter";
-import { AppHeader } from "../components/AppHeader";
-import { RecipeCardProps } from "../components/RecipeCard";
-import { RecipeCardList } from "../components/RecipeCardList";
-import { fetchData } from "../utils/fetchData";
-import { ALL_POSTS } from "../utils/graphqlqueries";
+import type { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
+import { AppFooter } from '../components/AppFooter'
+import { AppHeader } from '../components/AppHeader'
+import { RecipeCardProps } from '../components/RecipeCard'
+import { RecipeCardList } from '../components/RecipeCardList'
+import { fetchData } from '../utils/fetchData'
+import { ALL_POSTS } from '../utils/graphqlqueries'
 
 type HomeProps = {
-  allPosts: { node: RecipeCardProps }[];
-};
+  allPosts: { node: RecipeCardProps }[]
+}
 
 const Home: NextPage<HomeProps> = (props) => {
   return (
@@ -34,15 +34,15 @@ const Home: NextPage<HomeProps> = (props) => {
         <AppFooter />
       </div>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPosts = await fetchData(ALL_POSTS);
+  const allPosts = await fetchData(ALL_POSTS)
   return {
     props: { allPosts: allPosts.posts.edges },
     revalidate: 86400, // one day in seconds
-  };
-};
+  }
+}
 
-export default Home;
+export default Home

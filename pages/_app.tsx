@@ -1,13 +1,21 @@
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../globalStyles";
+import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../globalStyles'
 
 const theme = {
   colors: {
-    primary: "#00308f",
-    lightbackground: "#f0ffff",
+    primary: '#00308f',
+    lightbackground: '#f0ffff',
   },
-};
+  spacing: {
+    xs2: '4px',
+    xs1: '6px',
+    xs: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
+  },
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,9 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
-      </ThemeProvider>{" "}
+      </ThemeProvider>{' '}
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
