@@ -77,7 +77,9 @@ export const RecipeCard = ({
     </Link>
     <StyledCategoryContainer>
       {categories.edges.map((category) => (
-        <StyledCategory>{category.node.name}</StyledCategory>
+        <StyledCategory key={category.node.name}>
+          {category.node.name}
+        </StyledCategory>
       ))}
     </StyledCategoryContainer>
   </StyledCard>
