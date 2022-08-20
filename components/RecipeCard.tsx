@@ -18,7 +18,10 @@ export const StyledCard = styled.section`
   }
   h2 {
     padding: 0 8px;
-    height: 64px;
+    font-size: 1.1em;
+    height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   @media (min-width: 767px) {
     margin: 48px auto;
