@@ -1,6 +1,6 @@
-import React from "react"; // we need this to make JSX compile
-import styled from "styled-components";
-import { RecipeCard, RecipeCardProps } from "./RecipeCard";
+import React from 'react' // we need this to make JSX compile
+import styled from 'styled-components'
+import { RecipeCard, RecipeCardProps } from './RecipeCard'
 
 export const StylesList = styled.div`
   display: grid;
@@ -15,16 +15,16 @@ export const StylesList = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
   }
-`;
+`
 
 export type RecipeCardListProps = {
-  posts: { node: RecipeCardProps }[];
-};
+  posts: { node: RecipeCardProps }[]
+}
 
 export const RecipeCardList = (props: RecipeCardListProps) => (
   <StylesList>
-    {props.posts.map(({ node }) => (
-      <RecipeCard {...node} key={node.slug} />
-    ))}
+    {props.posts.map(({ node }) =>
+      node?.slug ? <RecipeCard {...node} key={node.slug} /> : undefined
+    )}
   </StylesList>
-);
+)

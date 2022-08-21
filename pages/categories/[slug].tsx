@@ -17,7 +17,6 @@ export default function Category(props: any) {
   if (!router.isFallback && !props.category.category.slug) {
     return <ErrorPage statusCode={404} />
   }
-  console.log('categories', JSON.stringify(props))
 
   return (
     <>
