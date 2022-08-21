@@ -33,6 +33,7 @@ const PostFieldsForCard = `fragment PostFields on Post {
     edges {
       node {
         name
+        slug
       }
     }
   }

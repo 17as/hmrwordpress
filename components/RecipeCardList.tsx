@@ -23,8 +23,8 @@ export type RecipeCardListProps = {
 
 export const RecipeCardList = (props: RecipeCardListProps) => (
   <StylesList>
-    {props.posts.map(({ node }) =>
-      node?.slug ? <RecipeCard {...node} key={node.slug} /> : undefined
-    )}
+    {props.posts?.map(({ node }) => (
+      <RecipeCard {...node} key={node.slug} />
+    ))}
   </StylesList>
 )

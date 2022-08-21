@@ -6,7 +6,6 @@ import {
   CATEGORY_BY_SLUG,
 } from '../../utils/graphqlqueries'
 import { GetStaticProps } from 'next'
-import { Recipe } from '../../components/Recipe'
 import { AppHeader } from '../../components/AppHeader'
 import { AppFooter } from '../../components/AppFooter'
 import Head from 'next/head'

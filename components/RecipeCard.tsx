@@ -40,6 +40,7 @@ export const StyledCategory = styled.span`
   background-color: ${(props) => props.theme.colors.lightbackground};
   margin-right: ${(props) => props.theme.spacing.xs};
   border: 1px solid ${(props) => props.theme.colors.primary};
+  cursor: pointer;
 `
 export type RecipeCardProps = {
   title: string
@@ -48,7 +49,7 @@ export type RecipeCardProps = {
   excerpt: string
   author: {}
   slug: string
-  categories: { edges: [{ node: { name: string } }] }
+  categories: { edges: [{ node: { name: string; slug: string } }] }
 }
 
 export const RecipeCard = ({
@@ -80,9 +81,15 @@ export const RecipeCard = ({
     </Link>
     <StyledCategoryContainer>
       {categories.edges.map((category) => (
-        <StyledCategory key={category.node.name}>
-          {category.node.name}
-        </StyledCategory>
+        <Link
+          href={{
+            pathname: `/categories/${category.node.slug}`,
+          }}
+        >
+          <StyledCategory key={category.node.name}>
+            {category.node.name}
+          </StyledCategory>
+        </Link>
       ))}
     </StyledCategoryContainer>
   </StyledCard>
