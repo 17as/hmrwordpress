@@ -9,6 +9,12 @@ export const StyledCard = styled.section`
   background-color: white;
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2);
 
+  img {
+    border: 1px solid transparent;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
   max-width: 450px;
   p {
     padding: 0 8px;
@@ -82,13 +88,12 @@ export const RecipeCard = ({
     <StyledCategoryContainer>
       {categories.edges.map((category) => (
         <Link
+          key={category.node.name}
           href={{
             pathname: `/categories/${category.node.slug}`,
           }}
         >
-          <StyledCategory key={category.node.name}>
-            {category.node.name}
-          </StyledCategory>
+          <StyledCategory>{category.node.name}</StyledCategory>
         </Link>
       ))}
     </StyledCategoryContainer>
