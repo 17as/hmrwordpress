@@ -93,7 +93,9 @@ export const RecipeCard = ({
             pathname: `/categories/${category.node.slug}`,
           }}
         >
-          <StyledCategory>{category.node.name}</StyledCategory>
+          <a rel="follow">
+            <StyledCategory>{category.node.name}</StyledCategory>
+          </a>
         </Link>
       ))}
     </StyledCategoryContainer>

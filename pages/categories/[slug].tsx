@@ -10,6 +10,15 @@ import { AppHeader } from '../../components/AppHeader'
 import { AppFooter } from '../../components/AppFooter'
 import Head from 'next/head'
 import { RecipeCardList } from '../../components/RecipeCardList'
+import styled from 'styled-components'
+
+export const StyledCategory = styled.div`
+  margin: 0 auto;
+  padding: 0 8px;
+  @media (min-width: 992px) {
+    max-width: 1200px;
+  }
+`
 
 export default function Category(props: any) {
   const router = useRouter()
@@ -24,13 +33,19 @@ export default function Category(props: any) {
         <meta name="theme-color" content="#00308f" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AppHeader />
-
-      <div>{props.category?.category?.name}</div>
-      <main>
-        <RecipeCardList posts={props.category?.category?.posts.edges} />
-      </main>
-      <AppFooter />
+      <div>
+        <AppHeader />
+        <StyledCategory>
+          <h1>{props.category?.category?.name}</h1>
+          {props.category?.category?.description && (
+            <p>{props.category?.category?.description}</p>
+          )}
+        </StyledCategory>
+        <main>
+          <RecipeCardList posts={props.category?.category?.posts.edges} />
+        </main>
+        <AppFooter />
+      </div>
     </>
   )
 }
