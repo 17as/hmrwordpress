@@ -19,8 +19,8 @@ export const StyledCard = styled.section`
   p {
     padding: 0 8px;
     line-height: 150%;
-    height: 72px;
     overflow: hidden;
+    margin-bottom: 24px;
   }
   h2 {
     padding: 0 8px;
@@ -51,7 +51,7 @@ export const StyledCategory = styled.span`
 export type RecipeCardProps = {
   title: string
   featuredImage: { node: { sourceUrl: string; altText: string } }
-  date: string
+  modified: string
   excerpt: string
   author: {}
   slug: string
@@ -61,43 +61,52 @@ export type RecipeCardProps = {
 export const RecipeCard = ({
   title,
   featuredImage,
-  date,
+  modified,
   excerpt,
   slug,
   categories,
-}: RecipeCardProps) => (
-  <StyledCard>
-    <Link
-      href={{
-        pathname: `/recipes/${slug}`,
-      }}
-    >
-      <a rel="follow">
-        {featuredImage?.node?.sourceUrl && (
-          <Image
-            width={450}
-            height={336}
-            alt={featuredImage?.node?.altText}
-            src={featuredImage.node.sourceUrl}
-          />
-        )}
-        <h2>{title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-      </a>
-    </Link>
-    <StyledCategoryContainer>
-      {categories.edges.map((category) => (
-        <Link
-          key={category.node.name}
-          href={{
-            pathname: `/categories/${category.node.slug}`,
-          }}
-        >
-          <a rel="follow">
-            <StyledCategory>{category.node.name}</StyledCategory>
-          </a>
-        </Link>
-      ))}
-    </StyledCategoryContainer>
-  </StyledCard>
-)
+}: RecipeCardProps) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' } as const
+  const lastModified = modified ? new Date(modified) : undefined
+  return (
+    <StyledCard>
+      <Link
+        href={{
+          pathname: `/recipes/${slug}`,
+        }}
+      >
+        <a rel="follow">
+          {featuredImage?.node?.sourceUrl && (
+            <Image
+              width={450}
+              height={336}
+              alt={featuredImage?.node?.altText}
+              src={featuredImage.node.sourceUrl}
+            />
+          )}
+          <h2>{title}</h2>
+          <p>
+            Last modified:{' '}
+            <time dateTime={modified}>
+              {lastModified?.toLocaleDateString('en-UK', options)}
+            </time>
+          </p>
+        </a>
+      </Link>
+      <StyledCategoryContainer>
+        {categories.edges.map((category) => (
+          <Link
+            key={category.node.name}
+            href={{
+              pathname: `/categories/${category.node.slug}`,
+            }}
+          >
+            <a rel="follow">
+              <StyledCategory>{category.node.name}</StyledCategory>
+            </a>
+          </Link>
+        ))}
+      </StyledCategoryContainer>
+    </StyledCard>
+  )
+}

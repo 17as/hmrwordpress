@@ -2,6 +2,7 @@ const PostFields = `fragment PostFields on Post {
   title
   slug
   date
+  modified
   categories {
     edges {
       node {
@@ -22,7 +23,7 @@ const PostFieldsForCard = `fragment PostFields on Post {
   title
   excerpt
   slug
-  date
+  modified
   featuredImage {
     node {
       sourceUrl,

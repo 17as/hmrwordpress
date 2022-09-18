@@ -65,9 +65,19 @@ export type RecipeProps = {
   content: string
 }
 
-export const Recipe = ({ title, date, content }: RecipeProps) => (
-  <StyledRecipe>
-    <h1>{title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: content }} />
-  </StyledRecipe>
-)
+export const Recipe = ({ title, date, content }: RecipeProps) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' } as const
+  const lastModified = date ? new Date(date) : undefined
+  return (
+    <StyledRecipe>
+      <h1>{title}</h1>
+      <p>
+        Last modified:{' '}
+        <time dateTime={date}>
+          {lastModified?.toLocaleDateString('en-UK', options)}
+        </time>
+      </p>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </StyledRecipe>
+  )
+}
